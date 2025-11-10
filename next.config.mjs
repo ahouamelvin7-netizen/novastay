@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true
+  async redirects() {
+    return [
+      {
+        source: '/success',
+        destination: '/app/success',
+        permanent: true,
+      },
+    ];
+  },
 };
+
 export default nextConfig;
